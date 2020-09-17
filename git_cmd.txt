@@ -1,6 +1,8 @@
 $ git config --global user.name "Your Name"
 $ git config --global user.email "email@example.com"
 
+git clone -b dev http://gaoudhiu.com
+
 适当的文件夹下初始化
 $ git init
 
