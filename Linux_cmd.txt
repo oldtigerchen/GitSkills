@@ -1,0 +1,12 @@
+docker 宿主机拷贝文件至容器
+$ docker cp /root/php/www/index.html ca798fee7920:/var/www/
+
+docker 容器文件拷贝至本地
+$ docker cp ca798fee7920:/var/www/ /root/php/
+#末尾 / 勿忘
+
+wget http://172.17.43.10/build/NLP/index.txt
+
+docker rm -f 容器id
+docker rmi 镜像id
+
