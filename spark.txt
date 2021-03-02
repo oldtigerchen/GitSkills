@@ -1,0 +1,21 @@
+from pyspark import SparkContext
+
+sc = SparkContext(appName='HelloSpark')
+
+# 创建RDD
+b = sc.parallelize([1,2,3,4,3,2])
+c = b.map(lambda x:x==3).collect()
+# 去重复
+x = b.distinct().collect()
+print(b.collect())
+g_b = b.groupBy(lambda x: '奇数' if x%2!=0 else '偶数').collect()
+
+# 交并补
+rdd1.intersection(rdd2)
+rdd1.union(rdd2)
+rdd1.subtract(rdd2)
+
+# 笛卡尔积
+rdd1.cartesian(rdd2)
+
+sc.stop()
